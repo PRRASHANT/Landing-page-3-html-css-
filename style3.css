@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color:rgba(250, 233, 228, 0.014) ;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#main img{
+    height:750px;
+    position: relative;
+    z-index: 99;
+}
+
+#scrolldiv{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    
+} 
+#scrolldiv::-webkit-scrollbar{
+    display: none;
+}
+#scrolldiv h1{
+    display: inline-block;
+    font-size: 180px;
+    margin-right: 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation-name: scroll;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sd2{
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    z-index: 100;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+#sd2::-webkit-scrollbar{
+    display: none;
+}
+#sd2 h1{
+    display: inline-block;
+    font-size: 180px;
+    margin-right: 30px;
+    letter-spacing: 5px;
+    color: transparent;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke-width:2px ;
+    -webkit-text-stroke-color: #000;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+}
+
+#sd3{
+    position: absolute;
+    top: 63%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+#sd3::-webkit-scrollbar{
+    display: none;
+}
+
+#sd3 h1{
+    display: inline-block;
+    font-size: 180px;
+    margin-right: 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#text{
+    font-size: 20px;
+    position: absolute;
+    width: 25%;
+    text-align: center;
+    top: 15%;
+    z-index: 4555;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#nav{
+    position: absolute;
+    left: 1%;
+    top: 4%;
+    letter-spacing: 2px;
+    font-family:Tahoma;
+    margin-left: 22px;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(calc(-100% - 35px));
+    }
+    50%{
+        transform: translateX(calc(-60% -300px));
+    }
+    100%{
+        
+        transform: translateX(0);
+    }
+}
+
+@media(max-width:500px){
+    #main{
+        flex-direction: column;
+    }
+    #main #left{
+        width:100%
+    }
+    #main #right{
+        width: 100%;
+    }
+}
